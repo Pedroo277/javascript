@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(22, 88, 119);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tal do DOM</h1>
+    <p id="myParagraph">Resultado</p>
+    <p>Aprendendo a usar <b>DOM</b></p>
+    <div id="msg">Clique em mim</div>
+    <button id="myButton">Click</button>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou Aguardando...'
+
+        // Selecionar um botão pelo ID
+const myButton = document.getElementById('myButton');
+
+// Adicionar um evento de clique ao botão
+myButton.addEventListener('click', () => {
+  // Selecionar um elemento de parágrafo pelo ID
+  const myParagraph = document.getElementById('myParagraph');
+
+  // Alterar o conteúdo do parágrafo
+  myParagraph.textContent = 'Novo texto do parágrafo';
+
+  // Alterar o estilo do parágrafo
+  myParagraph.style.color = 'blue';
+});
+
+    </script>
+</body>
+</html>
